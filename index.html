@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala Districts</title>
+  <meta name="description" content="A refined gallery showcasing the landmarks and character of each Kerala district.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="eyebrow">Explore Kerala</div>
+      <h1>Kerala Districts</h1>
+      <p>Discover the landscapes, culture, and landmarks that define each district.</p>
+      <p class="hero-note">Note: these are some famous landmarks from Kerala; there are many more beautiful places across the state.</p>
+    </header>
+
+    <main class="content">
+      <section class="controls" aria-label="Search and filter districts">
+        <label class="search-wrap" for="searchBox">
+          <span class="sr-only">Search districts</span>
+          <input type="text" id="searchBox" placeholder="Search by district, landmark, or keyword">
+        </label>
+
+        <div class="filter-buttons" id="filterButtons" aria-label="Filter districts by region">
+          <button class="filter-btn active" data-region="all" type="button">All</button>
+          <button class="filter-btn" data-region="south" type="button">South</button>
+          <button class="filter-btn" data-region="central" type="button">Central</button>
+          <button class="filter-btn" data-region="north" type="button">North</button>
+        </div>
+
+        <button id="randomBtn" class="primary-btn" type="button">Random District</button>
+      </section>
+
+      <p id="countText" class="count-text">Showing 14 of 14 districts</p>
+      <p id="noResults" class="no-results" aria-live="polite">No districts found. Try a different search.</p>
+
+      <section class="gallery" id="gallery" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Curated for a modern JavaScript gallery experience inspired by Kerala's coastal beauty and heritage.</p>
+      <p class="footer-note">Note: these are just some famous landmarks; Kerala has many more remarkable destinations.</p>
+    </footer>
+  </div>
+
+  <div id="overlay" class="overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button id="closeBtn" class="close-btn" type="button" aria-label="Close preview">×</button>
+      <button id="prevBtn" class="nav-btn nav-left" type="button" aria-label="Previous district">←</button>
+      <button id="nextBtn" class="nav-btn nav-right" type="button" aria-label="Next district">→</button>
+
+      <img id="modalImg" src="" alt="">
+      <div class="modal-text">
+        <span id="modalNumber" class="badge"></span>
+        <h2 id="modalName"></h2>
+        <p id="modalTagline" class="tagline"></p>
+        <p id="modalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
